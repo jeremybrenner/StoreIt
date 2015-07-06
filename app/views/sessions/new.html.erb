@@ -1,0 +1,16 @@
+<div class="container text-center">
+<h1>Login</h1>
+	<% flash.each do |key, value| %>
+        <div class="alert alert-danger"><%= value %></div>
+     <% end %>
+	<div class="row">
+	<%= form_for @store_owner, url: login_path , method: "post" do |u| %>
+		<%= label_tag 'Email' %>
+		<%= u.text_field :email %>
+		<%= label_tag 'Password' %>
+		<%= u.password_field :password %>
+		<%= u.submit "Login" %>
+	<% end %>
+	<div>
+	<% console %>
+</div>

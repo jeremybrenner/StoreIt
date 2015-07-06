@@ -1,0 +1,9 @@
+<%= render "layouts/navbar" %>
+You current have <%= current_owner.simple_receipts.count %> receipts on your account.
+<%= link_to "Make new receipt", new_receipt_path %>
+<div ng-app="AccountApp">
+	<div ng-controller="MainCtrl" class="ng-cloak">
+		{{greeting}}, {{current_user.email}}
+	</div>
+</div>
+<% console %>
